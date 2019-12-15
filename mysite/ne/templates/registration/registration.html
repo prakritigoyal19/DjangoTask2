@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SIGN_UP</title>
+    <link rel="stylesheet" href= "{% static 'stylesheet_registration.css' %}" >
+</head>
+<body>
+    <form method="post" action = "{% url 'register' %}">
+        {% csrf_token %}
+        <div class = 'container'>
+           <!-- <p><label for="name">Name: </label>
+            <input id="name" type="text" name="name" value="{{ name }}"></p>
+
+            <p><label for="email">E-Mail: </label>
+            <input id="email" type="email" name="email" value="{{ email }}"></p>
+
+            <p><label for="age">Age: </label>
+            <input id="age" type="number" name="age" value="{{ age }}"></p>
+
+            <p><label for="gender">Gender(M/F/NA): </label>
+            <input id="gender" type="text" name="gender" value="{{ gender }}"></p>
+
+            <p><label for="id_password1">Password: </label>
+            <input id="id_password1" type="password" name="id_password1" value="{{ password1 }}"></p>
+
+            <p><label for="id_password2">Password Confirmation: </label>
+            <input id="id_password2" type="password" name="id_password2" value="{{ password2 }}"></p> --!>
+
+            {{ form.as_p }}
+            <input class = 'btn' type="submit" value="SIGN UP">
+        </div>
+
+    </form>
+
+    {% if form.errors %}
+        <p>Either password or username is incorrect</p>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,41 @@
+body {
+  background-color: #6A0665 ;
+
+}
+
+li {
+  list-style: none;
+  color: white;
+}
+
+.container {
+
+	width: 500px;
+	height: 400px;
+	text-align: center;
+	position: relative;
+	top:100px;
+	left:400px;
+}
+
+p {
+    color:white;
+	font-family: "Ubuntu Condensed";
+}
+
+.btn {
+    width: 200px;
+	height:50px;
+	background-color: #0AE1C3;
+	margin: 30px;
+	font-family: "Ubuntu Condensed";
+}
+
+.helptext {
+    color = white;
+}
+
+span {
+    display : block;
+}
+

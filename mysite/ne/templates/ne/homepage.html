@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+    <link rel="stylesheet" href= "{% static 'stylesheet_homepage.css' %}" >
+</head>
+<body>
+{% block content %}
+<div class = "container" >
+    {% if user.is_authenticated %}
+        <h1>Hi {{ user.name }}!</h1>
+        <h2>What Would You Like To Do Today?</h2>
+        <a class  = 'btn' href="{% url 'logout' %}">logout</a>
+    {% else %}
+        <h1>WELCOME!</h1>
+        <h2>You are not logged in</h2>
+        <a class = 'btn' href="{% url 'register' %}">SIGN IN</a>
+        <a class = 'btn' href="{% url 'login' %}">LOGIN</a>
+        <!-- <p><a class = 'btn' href="{% url 'social:begin' 'facebook' %}">LOGIN WITH FACEBOOK</a></p> --!>
+    {% endif %}
+</div>
+
+{% endblock %}
+</body>
+</html>

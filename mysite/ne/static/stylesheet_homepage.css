@@ -1,0 +1,42 @@
+body {
+  font-family: Ubuntu Condensed;
+  background-color: #6A0665 ;
+
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+
+	width: 500px;
+	height: 400px;
+	text-align: center;
+	position: relative;
+	top:100px;
+	left:400px;
+}
+
+h1 {
+	color: #0AE1C3;
+	font-size: 60px;
+}
+
+h2 {
+	color: white;
+	font-size: 30px;
+	padding-bottom : 40px;
+}
+
+.btn {
+    margin-right:10px;
+    margin-left:10px;
+	padding: 13px 50px;
+	background-color: #0AE1C3;
+	font-family: Ubuntu Condensed;
+}
+
+p{
+    margin-top:30px;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" href= "{% static 'stylesheet_login.css' %}" >
+  </head>
+  <body>
+  	<div class = "container">
+  		<div class = "Title">
+  			<h1>LOGIN HERE</h1>
+  		</div>
+        <form method="post">
+            {% csrf_token %}
+            <p>E-mail: </p> <p>{{form.username}}</p>
+            <p>Password:</p> <p>{{form.password}}</p>
+  		    <input class = "login_btn" type="submit" value="Login">
+        </form>
+
+        {% if form.errors %}
+        <p>Either password or username is incorrect</p>
+        {% endif %}
+
+  	</div>
+  </body>
+</html>
